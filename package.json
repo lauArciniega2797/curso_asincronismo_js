@@ -1,0 +1,25 @@
+{
+  "name": "curso_asincronismo_js",
+  "version": "1.0.0",
+  "description": "Texto de prueba",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauArciniega2797/curso_asincronismo_js.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Laura Arciniega arciniega1497@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lauArciniega2797/curso_asincronismo_js/issues"
+  },
+  "homepage": "https://github.com/lauArciniega2797/curso_asincronismo_js#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
