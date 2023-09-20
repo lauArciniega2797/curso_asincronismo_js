@@ -1,4 +1,4 @@
-const XMLHttpRequest = require('xmlhttprequest') //paquete instalado con npm
+const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest //paquete instalado con npm
 const API = 'https://api.escuelajs.co/api/v1'; //url de la api que vamos a consumir
 
 
@@ -34,15 +34,18 @@ fetchData = (urlApi, callback) => {
     xhttp.send() //para que se ejecute toda la logica que hicimos anteriormente en esta función
 }
 
-fetchData(`${API}/products`, (error, data) => {
-    //si sali oun error entonces ya no queremos nada :/
+fetchData(`${API}/products`, (error, data) => { //todo se puede sacar desde este callback, pero para fines de ejemplo hacemos los demas
     if(error) return console.error(error)
     
     fetchData(`${API}/products/${data[0].id}`, (error2, data2) => {
         if(error2) return console.error(error2)
 
-        fetchData(`${API}/categories/${data2.category.id}`, (error2, data2) => {
-            
+        fetchData(`${API}/categories/${data2.category.id}`, (error3, data3) => {
+            if(error3) return console.error(error3)
+
+            console.log(data[0]);
+            console.log(data2.title);
+            console.log(data3.name);
         })
     })
 })
