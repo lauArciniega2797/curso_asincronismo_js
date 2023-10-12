@@ -34,7 +34,7 @@ anotherFunction(API) //con este llamanos a la funcion que nos va a traer los dat
 
 // ---------------------------------------------------------
 //Esta funcion, devuelve un error si la api no funciona
-/* async function runCode() {
+async function runCode() {
     const url = 'https://domain-api-com'; //esta api no existe
     try {
         let response = await fetch(url)
@@ -76,4 +76,4 @@ fetchData(`${urlApi}/products`).next().then(({ value, done }) => {
            console.log(value.name); //Imprime el nombre de la categoría del producto seleccionado
         });
     });
-}); */
+});

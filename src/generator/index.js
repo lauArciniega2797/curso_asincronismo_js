@@ -7,10 +7,10 @@ function* gen(){
 }
 
 const g = gen() 
-console.log(g.next().value) // permite ir iterando por cada elemento de la funcion gen
-console.log(g.next().value) 
-console.log(g.next().value) 
-console.log(g.next().value) //este valor dara undefined porque ya no hay mas elementos para iterar
+console.log(g.next().value) //1             // permite ir iterando por cada elemento de la funcion gen
+console.log(g.next().value) //2
+console.log(g.next().value) //3
+console.log(g.next().value) //undefined     //este valor dara undefined porque ya no hay mas elementos para iterar
 
 function* iterable(array) {
     for (let value of array) {
@@ -19,8 +19,8 @@ function* iterable(array) {
 }
 
 const it = iterable(['LAURA', 'CECILIA', 'ARCINIEGA', 'ROQUE'])
-console.log(it.next().value) //LAURA
-console.log(it.next().value) //CECILIA
-console.log(it.next().value) //ARCINIEGA
-console.log(it.next()) //{ value: 'ROQUE', done: false }  //para que no salga así y solo salga el nombre, ponemos el .value
-console.log(it.next().value) //este valor dara undefined porque ya no hay mas elementos para iterar
+console.log(it.next().value)    //LAURA
+console.log(it.next().value)    //CECILIA
+console.log(it.next().value)    //ARCINIEGA
+console.log(it.next())          //{ value: 'ROQUE', done: false }  //para que no salga así y solo salga el nombre, ponemos el .value
+console.log(it.next().value)    //este valor dara undefined porque ya no hay mas elementos para iterar
